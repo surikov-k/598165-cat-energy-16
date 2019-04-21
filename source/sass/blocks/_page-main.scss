@@ -1,0 +1,10 @@
+.page-main {
+  &__section {
+    margin-bottom: 20px;
+
+    &--gray {
+      background-color: $gray-color;
+      margin-bottom: 0;
+    }
+  }
+}

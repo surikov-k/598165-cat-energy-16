@@ -1,0 +1,8 @@
+.example {
+  padding-top: 35px;
+
+  &__title {
+    @include title-style;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,41 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__info {
+    width: 50%;
+  }
+
+  &__title {
+    font-family: $title-fontstack;
+    color: $title-color;
+    line-height: 18px;
+    margin: 0;
+    padding-top: 28px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__table tbody {
+    display: block;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
