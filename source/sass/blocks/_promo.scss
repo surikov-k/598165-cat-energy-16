@@ -1,0 +1,35 @@
+.promo {
+  position: relative;
+  padding-top: 28px;
+  color: #ffffff;
+  text-align: center;
+
+  &__title {
+    @include title-style;
+    line-height: 36px;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  &__slogan {
+    font-family: $title-fontstack;
+    text-transform: uppercase;
+    line-height: 14px;
+    margin-bottom: 300px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 305px;
+    width: 100%;
+    background-color: $accent-color;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

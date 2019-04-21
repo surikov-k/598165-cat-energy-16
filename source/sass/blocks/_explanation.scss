@@ -1,0 +1,28 @@
+.explanation {
+  &__title {
+    @include title-style;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include reset;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    padding-left: 80px;
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-color: $accent-color;
+    }
+  }
+}

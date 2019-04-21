@@ -1,0 +1,114 @@
+.form {
+  &__fieldset {
+    border: none;
+    padding: 20px 0;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__legend {
+    display: flex;
+    font-family: $title-fontstack;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      margin-top: 12px;
+      background-color: $accent-color;
+      transform: translateX(20px);
+    }
+  }
+
+  &__input-radio,
+  &__input-checkbox {
+    display: none;
+  }
+
+  &__label {
+    font-family: $title-fontstack;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 16px;
+
+    &--radio,
+    &--checkbox {
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ebebeb;
+        margin-right: 16px;
+      }
+    }
+
+    &--radio {
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__input-radio:checked + &__label--radio::after,
+  &__input-checkbox:checked + &__label--checkbox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+
+  &__input-checkbox:checked + &__label--checkbox::after {
+    border-radius: 0;
+    left: 5px;
+    width: 21px;
+    height: 16px;
+  }
+
+  &__input {
+    &::placeholder {
+      font-family: $title-fontstack;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    flex-grow: 1;
+    border: 1px solid #ebebeb;
+    padding: 16px;
+  }
+
+  &__textarea {
+    &::placeholder {
+      font-family: $title-fontstack;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    border: 1px solid $gray-color;
+    padding: 12px;
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+  }
+}

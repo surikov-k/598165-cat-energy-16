@@ -1,0 +1,12 @@
+.selection {
+  &__title {
+    @include title_style;
+  }
+
+  &__text {
+    font-family: $title-fontstack;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111111;
+  }
+}

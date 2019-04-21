@@ -1,0 +1,64 @@
+.additions {
+  padding-top: 30px;
+  padding-bottom: 38px;
+
+  &__title {
+    display: flex;
+    font-family: $title-fontstack;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      margin-top: 14px;
+      background-color: $accent-color;
+      transform: translateX(20px);
+    }
+  }
+
+  &__list {
+    @include reset;
+  }
+
+  &__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  &__present {
+    position: relative;
+    min-height: 290px;
+    background-color: $accent-color;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__present-text {
+    margin: 0;
+    width: 150px;
+
+    &::before {
+      position: absolute;
+      top: 65px;
+      left: 50%;
+      transform: translateX(-27px);
+      content: "";
+      display: block;
+      width: 55px;
+      height: 60px;
+      background-color: #ffffff;
+    }
+  }
+}

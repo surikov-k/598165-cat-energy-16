@@ -1,0 +1,21 @@
+.site-list {
+  @include reset;
+  color: $title-color;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &__item {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  &__link {
+    display: block;
+    padding: 24px 0;
+    text-decoration: none;
+    color: inherit;
+  }
+}

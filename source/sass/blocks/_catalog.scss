@@ -1,0 +1,57 @@
+.catalog {
+  &__title {
+    @include title-style;
+    text-align: center;
+    margin-bottom: 33px;
+  }
+
+  &__list {
+    @include reset;
+  }
+
+  &__item {
+    padding-bottom: 25px;
+    border-top: 1px solid $gray-color;
+  }
+
+  &__load {
+    border-top: 1px solid $gray-color;
+    border-bottom: 1px solid $gray-color;
+    padding-top: 85px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  &__load-more-link {
+    position: relative;
+    display: block;
+    font-family: $title-fontstack;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    color: $title-color;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-15px);
+      width: 30px;
+      height: 30px;
+      background-color: $gray-color;
+    }
+  }
+
+  &__load-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__load-all {
+    background-color: $gray-color;
+    color: $body-text-color;
+  }
+}
