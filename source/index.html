@@ -11,7 +11,7 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <div class="container page-header__logo">
+        <div class="page-header__logo">
           <img
             src="http://placehold.it/33x38"
             alt="Лого Кэт энерджи"
@@ -32,7 +32,7 @@
         </div>
       </div>
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--on-background">
           <li class="site-list__item">
             <a class="site-list__link">
               Главная
@@ -54,21 +54,28 @@
 
     <main class="page-main">
       <section class="page-main__section promo">
-        <div class="container">
+        <div class="container promo__container">
           <h1 class="promo__title">
             Функциональное питание для котов
           </h1>
           <p class="promo__slogan">
             Занялся собой? Займись котом!
           </p>
-          <button class="promo__button button">
+          <img
+            class="promo__img"
+            src="http://placehold.it/280x271"
+            alt="Cat Energy Pro Курица"
+            width="280"
+            height="271"
+          />
+          <button class="button button--big promo__button">
             Подобрать программу
           </button>
         </div>
       </section>
 
       <section class="page-main__section programs">
-        <div class="container">
+        <div class="container programs__container">
           <h2 class="visually-hidden">
             Программы питания для котов
           </h2>
@@ -105,7 +112,7 @@
           <h2 class="explanation__title">
             Как это работает
           </h2>
-          <ul class="explanation__list">
+          <ol class="explanation__list">
             <li class="explanation__item explanation__item--nutrients">
               Функциональное питание содержит только полезные питательные
               вещества.
@@ -122,48 +129,53 @@
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
             </li>
-          </ul>
+          </ol>
         </div>
       </section>
 
       <section class="page-main__section page-main__section--gray example">
-        <div class="container">
-          <h2 class="example__title">
-            Живой пример
-          </h2>
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-            Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
-            этом он не менял своих привычек и по-прежнему спит по 16 часов в
-            день.
-          </p>
-          <table class="example__tabel table">
-            <tbody>
-              <tr class="table__row">
-                <td class="table__key">
-                  Снижение веса
-                </td>
-                <td class="table__value">
-                  5 кг
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__key">
-                  Затрачено времени
-                </td>
-                <td class="table__value">
-                  60 дней
-                </td>
-              </tr>
-            </tbody>
-            <tfoot class="table__footer">
-              <tr>
-                <td colspan="2">
-                  Затраты на питание: 15 000 руб.
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+        <div class="container example__container">
+          <div class="example__info">
+            <h2 class="example__title">
+              Живой пример
+            </h2>
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <table class="example__tabel table">
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__key">
+                    Снижение веса
+                  </td>
+                  <td class="table__value">
+                    5 кг
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__key">
+                    Затрачено времени
+                  </td>
+                  <td class="table__value">
+                    60 дней
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot class="table__footer">
+                <tr>
+                  <td>
+                    Затраты на питание:
+                  </td>
+                  <td>
+                    15 000 руб.
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
           <div class="example__slider before-after">
             <ul class="before-after__list">
               <li class="before-after__item">
@@ -187,6 +199,9 @@
               <button class="before-after__button before-after__button--before">
                 Было
               </button>
+              <div class="before-after__input">
+                <div class="before-after__input-handle"></div>
+              </div>
               <button class="before-after__button before-after__button--after">
                 Стало
               </button>
@@ -194,18 +209,19 @@
           </div>
         </div>
       </section>
-      <div class="page-main__section address">
-        <div class="container container--no-padding">
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__address address">
+        <div class="container">
           <p class="address__invitation">
             Приглашаем к&nbsp;сотрудничеству дилеров!
           </p>
           <p class="address__address">
-            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург
+            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+            <span class="address__address-city">Санкт-Петербург</span>
           </p>
         </div>
       </div>
-    </main>
-    <footer class="page-footer">
       <div class="page-footer__map">
         <img
           class="page-footer__map-image"

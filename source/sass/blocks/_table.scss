@@ -3,16 +3,33 @@
   display: block;
   margin-bottom: 30px;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: table;
+  }
+
   & tbody {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      width: 368px;
+      margin-right: auto;
+    }
   }
 
   &__row {
     display: flex;
     width: 44%;
     flex-direction: column-reverse;
+
+    @media (min-width: $tablet-width) {
+      width: 163px;
+    }
   }
 
   &__key {
@@ -26,6 +43,13 @@
     text-align: center;
     background-color: $gray-color;
     z-index: 2;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      width: auto;
+      padding: 0 10px;
+      margin-top: -7px;
+    }
   }
 
   &__value {
@@ -39,6 +63,10 @@
     text-align: center;
     border: 1px solid #cdcdcd;
     border-radius: 3px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+    }
   }
 
   &__footer {
@@ -46,5 +74,30 @@
     justify-content: center;
     font-family: $title-fontstack;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: initial;
+    }
+  }
+
+  &__footer tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+    }
+  }
+
+  &__footer td {
+    @media (min-width: $desktop-width) {
+      margin-right: 60px;
+    }
   }
 }

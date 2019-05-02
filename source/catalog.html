@@ -53,12 +53,14 @@
     </header>
     <main class="page-main">
       <section class="page-main__section catalog">
-        <h2 class="catalog__title">
-          Каталог продукции
-        </h2>
-        <ul class="catalog__list">
+        <div class="container">
+          <h2 class="catalog__title">
+            Каталог продукции
+          </h2>
+        </div>
+        <ul class="container catalog__list">
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -91,7 +93,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -124,7 +126,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -157,7 +159,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -190,7 +192,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -223,7 +225,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -256,7 +258,7 @@
             </article>
           </li>
           <li class="catalog__item">
-            <article class="container product">
+            <article class="product">
               <img
                 class="product__image"
                 src="http://placehold.it/140x144"
@@ -288,122 +290,125 @@
               <a href="#" class="product__button button">Заказать</a>
             </article>
           </li>
+          <li class="catalog__item">
+            <div class="catalog__load">
+              <a href="#" class="catalog__load-more-link">
+                Показать еще 100500 товаров
+              </a>
+              <p class="catalog__load-text">
+                На самом деле вкусов гораздо больше!
+              </p>
+              <a href="#" class="catalog__load-all button">
+                Показать все
+              </a>
+            </div>
+          </li>
         </ul>
-        <div class="catalog__load">
-          <div class="container">
-            <a href="#" class="catalog__load-more-link">
-              Показать еще 100500 товаров
-            </a>
-            <p class="catalog__load-text">
-              На самом деле вкусов гораздо больше!
-            </p>
-            <a href="#" class="catalog__load-all button">
-              Показать все
-            </a>
-          </div>
-        </div>
       </section>
 
-      <section class="page-main__section container additions">
+      <section class="page-main__section additions">
         <h2 class="additions__title">
           Дополнительные товары
         </h2>
-        <ul class="additions__list">
-          <li class="additions__item">
-            <article class="additional-product">
-              <h3 class="additional-product__title">
-                Сахарозаменитель
-              </h3>
-              <table class="additional-product__table">
-                <tbody>
-                  <tr class="additional-product__table-data">
-                    <td class="additional-product__table-key">
-                      1 упаковка (100 г)
-                    </td>
-                    <td class="additional-product__table-value">200 Р.</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#" class="additional-product__button button">
-                Заказать
-              </a>
-            </article>
-          </li>
-          <li class="additions__item">
-            <article class="additional-product">
-              <h3 class="additional-product__title">
-                Питьевая вода
-              </h3>
-              <table class="additional-product__table">
-                <tbody>
-                  <tr class="additional-product__table-data">
-                    <td class="additional-product__table-key">5 литров</td>
-                    <td class="additional-product__table-value">50 Р.</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#" class="additional-product__button button">
-                Заказать
-              </a>
-            </article>
-          </li>
-          <li class="additions__item">
-            <article class="additional-product">
-              <h3 class="additional-product__title">
-                Молоко
-              </h3>
-              <table class="additional-product__table">
-                <tbody>
-                  <tr class="additional-product__table-data">
-                    <td class="additional-product__table-key">1 литр</td>
-                    <td class="additional-product__table-value">100 Р.</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#" class="additional-product__button button">
-                Заказать
-              </a>
-            </article>
-          </li>
-          <li class="additions__item">
-            <article class="additional-product">
-              <h3 class="additional-product__title">
-                Витамины
-              </h3>
-              <table class="additional-product__table">
-                <tbody>
-                  <tr class="additional-product__table-data">
-                    <td class="additional-product__table-key">
-                      1 упаковка (30 г)
-                    </td>
-                    <td class="additional-product__table-value">300 Р.</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#" class="additional-product__button button">
-                Заказать
-              </a>
-            </article>
-          </li>
-        </ul>
-        <div class="additions__present">
-          <p class="additions__present-text">
-            Закажите все и&nbsp;получите чехол для кота в подарок!
-          </p>
+        <div class="container additions__container">
+          <ul class="additions__list">
+            <li class="additions__item">
+              <article class="additional-product">
+                <table class="additional-product__table">
+                  <caption class="additional-product__title">
+                    Сахарозаменитель
+                  </caption>
+                  <tbody>
+                    <tr class="additional-product__table-data">
+                      <td class="additional-product__table-key">
+                        1 упаковка (100 г)
+                      </td>
+                      <td class="additional-product__table-value">200 Р.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#" class="additional-product__button button">
+                  Заказать
+                </a>
+              </article>
+            </li>
+            <li class="additions__item">
+              <article class="additional-product">
+                <table class="additional-product__table">
+                  <caption class="additional-product__title">
+                    Питьевая вода
+                  </caption>
+                  <tbody>
+                    <tr class="additional-product__table-data">
+                      <td class="additional-product__table-key">5 литров</td>
+                      <td class="additional-product__table-value">50 Р.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#" class="additional-product__button button">
+                  Заказать
+                </a>
+              </article>
+            </li>
+            <li class="additions__item">
+              <article class="additional-product">
+                <table class="additional-product__table">
+                  <caption class="additional-product__title">
+                    Молоко
+                  </caption>
+                  <tbody>
+                    <tr class="additional-product__table-data">
+                      <td class="additional-product__table-key">1 литр</td>
+                      <td class="additional-product__table-value">100 Р.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#" class="additional-product__button button">
+                  Заказать
+                </a>
+              </article>
+            </li>
+            <li class="additions__item">
+              <article class="additional-product">
+                <table class="additional-product__table">
+                  <caption class="additional-product__title">
+                    Витамины
+                  </caption>
+                  <tbody>
+                    <tr class="additional-product__table-data">
+                      <td class="additional-product__table-key">
+                        1 упаковка (30 г)
+                      </td>
+                      <td class="additional-product__table-value">300 Р.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#" class="additional-product__button button">
+                  Заказать
+                </a>
+              </article>
+            </li>
+          </ul>
+          <div class="additions__present">
+            <p class="additions__present-text">
+              Закажите все и&nbsp;получите чехол для кота в подарок!
+            </p>
+          </div>
         </div>
       </section>
-      <div class="page-main__section page-main__section--gray address">
-        <div class="container container--no-padding">
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__address address">
+        <div class="container">
           <p class="address__invitation">
             Приглашаем к&nbsp;сотрудничеству дилеров!
           </p>
           <p class="address__address">
-            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург
+            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+            <span class="address__address-city">Санкт-Петербург</span>
           </p>
         </div>
       </div>
-    </main>
-    <footer class="page-footer">
       <div class="page-footer__map">
         <img
           class="page-footer__map-image"

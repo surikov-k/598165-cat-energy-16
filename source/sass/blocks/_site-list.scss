@@ -8,8 +8,21 @@
   text-transform: uppercase;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #222222;
+  }
+
   &__item {
     border-bottom: 1px solid #e6e6e6;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 20px;
+      border-bottom: none;
+    }
   }
 
   &__link {
@@ -17,5 +30,29 @@
     padding: 24px 0;
     text-decoration: none;
     color: inherit;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 12px;
+      border-bottom: 2px solid $accent-color;
+
+      &[href] {
+        border: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 20px;
+    }
+  }
+
+  &--on-background &__link {
+    @media (min-width: $desktop-width) {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+
+      &[href] {
+        border: none;
+      }
+    }
   }
 }

@@ -1,14 +1,37 @@
 .page-header {
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+
   &__top {
     min-height: 66px;
     border-bottom: 1px solid $gray-color;
     display: flex;
+    margin-right: auto;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &__logo {
     display: flex;
+    width: 280px;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      justify-content: flex-start;
+    }
   }
 
   &__menu-toggle {
@@ -16,5 +39,9 @@
     height: 18px;
     background-color: $gray-color;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }

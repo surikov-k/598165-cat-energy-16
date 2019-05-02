@@ -1,7 +1,22 @@
 .program {
+  position: relative;
+
   background-color: $gray-color;
   padding: 21px;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-bottom: 65px;
+    padding-right: 285px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    padding-right: 50px;
+    padding-top: 47px;
+  }
 
   &__title {
     display: flex;
@@ -14,6 +29,16 @@
     font-size: 24px;
     line-height: 37px;
 
+    @media (min-width: $tablet-width) {
+      display: block;
+      font-size: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      margin-bottom: 45px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -22,11 +47,29 @@
       height: 50px;
       background-color: $accent-color;
       border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 40px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 100px;
+        height: 100px;
+        position: static;
+        margin-right: 70px;
+      }
     }
   }
 
   &__text {
     margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 65px;
+    }
   }
 
   &__to-catalog {
@@ -39,5 +82,11 @@
     color: $title-color;
     padding-top: 23px;
     border-top: 1px solid #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      padding: 0;
+      border: none;
+    }
   }
 }

@@ -4,21 +4,78 @@
   color: #ffffff;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    color: $body-text-color;
+    text-align: left;
+    padding-bottom: 530px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-top: -145px;
+    min-height: 696px;
+    z-index: -1;
+  }
+
+  &__container {
+    @media (min-width: $desktop-width) {
+      padding-top: 225px;
+      padding-left: 80px;
+      padding-right: 600px;
+    }
+  }
+
   &__title {
     @include title-style;
     line-height: 36px;
     color: #ffffff;
     margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 90px;
+      margin-bottom: 40px;
+      padding-right: 60px;
+
+      font-size: 60px;
+      line-height: 60px;
+      color: #111111;
+    }
   }
 
   &__slogan {
     font-family: $title-fontstack;
     text-transform: uppercase;
     line-height: 14px;
-    margin-bottom: 300px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 90px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
-  &::before {
+  &__img {
+    @media (min-width: $tablet-width) {
+      width: 709px;
+      height: 609px;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 552px;
+      height: 499px;
+      position: absolute;
+      top: 145px;
+      left: 50%;
+      transform: translateX(-116px);
+      z-index: -1;
+    }
+  }
+
+  &::after {
     content: "";
     display: block;
     height: 305px;
@@ -27,9 +84,26 @@
     position: absolute;
     top: 0;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      min-height: 100%;
+      width: 50%;
+      right: 0;
+      z-index: -10;
+    }
   }
 
   &__button {
     width: 100%;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 90px;
+      margin-top: 40px;
+    }
   }
 }

@@ -1,9 +1,18 @@
 .address {
+  background-color: #ffffff;
   padding: 20px 0;
 
   & .container {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+  }
+
+  @media (min-width: $desktop-width) {
+    & .container {
+      padding: 0;
+      width: auto;
+    }
   }
 
   &__invitation {
@@ -13,6 +22,12 @@
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 180px;
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__address {
@@ -20,5 +35,20 @@
     padding: 0;
     line-height: 20px;
     width: 50%;
+
+    @media (min-width: $tablet-width) {
+      text-align: right;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+    }
+  }
+
+  &__address-city {
+    margin-top: auto;
   }
 }

@@ -1,8 +1,31 @@
 .example {
   padding-top: 35px;
 
+  &__container {
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+
   &__title {
     @include title-style;
     margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__text {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__slider {
+    outline: 1px solid lime;
+    background-color: rgba(0, 240, 0, 0.05);
   }
 }
