@@ -54,6 +54,7 @@
     @media (min-width: $tablet-width) {
       margin-bottom: 75px;
     }
+
     @media (min-width: $desktop-width) {
       margin: 0;
     }
@@ -93,7 +94,6 @@
     padding-top: 190px;
 
     @media (min-width: $tablet-width) {
-      padding: 0;
       padding: 75px;
       padding-left: 425px;
     }
@@ -110,7 +110,6 @@
   }
 
   &__present-text {
-    margin: 0;
     width: 150px;
     text-align: center;
     margin: 0 auto;
