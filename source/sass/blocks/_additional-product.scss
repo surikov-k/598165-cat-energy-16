@@ -1,22 +1,57 @@
 .additional-product {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 10px;
     font-family: $title-fontstack;
     font-weight: normal;
     text-transform: uppercase;
+    text-align-last: left;
+    font-size: 16px;
     line-height: 16px;
     color: #222222;
+
+    @media (min-width: $tablet-width) {
+      margin-right: auto;
+      font-size: 20px;
+    }
   }
 
   &__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 610px;
+      margin-bottom: 0;
+      align-items: center;
+    }
   }
 
   &__table-data {
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      & td {
+        margin-left: 55px;
+      }
+    }
+  }
+
+  &__button {
+    @media (min-width: $desktop-width) {
+      width: 245px;
+    }
   }
 }

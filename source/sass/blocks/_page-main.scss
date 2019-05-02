@@ -4,7 +4,10 @@
 
     &--gray {
       background-color: $gray-color;
-      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 80px;
     }
   }
 }

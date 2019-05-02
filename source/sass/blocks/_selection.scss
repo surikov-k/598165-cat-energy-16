@@ -1,12 +1,15 @@
 .selection {
-  &__title {
-    @include title_style;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
   }
 
-  &__text {
-    font-family: $title-fontstack;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #111111;
+  &__title {
+    @include title_style;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 50px;
+    }
   }
 }
