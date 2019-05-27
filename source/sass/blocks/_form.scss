@@ -1,9 +1,32 @@
 .form {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
+
   &__fieldset {
-    padding: 0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    padding: 0;
+
     border: none;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 59px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__fieldset--additions {
+    margin-bottom: 24px;
   }
 
   &__fieldset--inner {
@@ -15,75 +38,104 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: $desktop-width;
-      padding: 0 40px;
       display: flex;
       justify-content: space-between;
+      width: $desktop-width;
+      padding: 0 40px;
     }
   }
 
   &__container-inner {
-    padding-top: 20px;
+    margin-bottom: 23px;
+    padding-top: 25px;
 
     @media (min-width: $tablet-width) {
+      width: auto;
+      margin: 0;
+      margin-bottom: 72px;
       padding: 0;
       padding-top: 30px;
-      margin: 0;
-      width: auto;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0;
-      width: 45%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 200px;
+      width: 570px;
+      // min-height: 196px;
+      margin-bottom: 0;
+      padding: 0;
     }
   }
 
   &__container-inner--bordered {
+    margin-bottom: 0;
+    padding-top: 19px;
+    padding-bottom: 8px;
+
     border: 1px solid $gray-color;
 
     @media (min-width: $tablet-width) {
-      padding: 30px 40px 20px;
+      margin-bottom: 10px;
+      padding: 24px 29px 12px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 30px;
+      // min-height: 194px;
+      margin-bottom: 0;
+      padding-top: 23px;
+      padding-bottom: 30px;
+      padding-left: 26px;
     }
   }
 
   &__container {
     @media (min-width: $tablet-width) {
+      padding-right: 67px;
       padding-left: 70px;
-      padding-right: 70px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 40px;
       display: flex;
       justify-content: space-between;
+      padding: 0 40px;
     }
   }
 
   &__text {
-    font-family: $title-fontstack;
-    font-weight: 400;
-    text-transform: uppercase;
+    padding-right: 30px;
+
     color: #111111;
+    font-weight: 400;
+    font-family: $title-fontstack;
+    text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 35px;
+      padding-right: 300px;
+      padding-left: 40px;
+
       font-size: 20px;
       line-height: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 68px;
+
+      padding-right: 850px;
+      padding-left: 0;
     }
   }
 
   &__button {
     width: 100%;
+    margin-bottom: 20px;
 
     @media (min-width: $tablet-width) {
-      width: 282px;
+      width: 284px;
+      padding: 15px 0;
+
+      font-size: 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -92,8 +144,14 @@
   }
 
   &__footnote {
+    text-align: center;
+
     @media (min-width: $tablet-width) {
-      width: 282px;
+      width: 285px;
+      margin: 0;
+      margin-top: 12px;
+
+      text-align: left;
     }
 
     @media (min-width: $desktop-width) {
@@ -103,56 +161,95 @@
 
   &__field {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     @media (min-width: $desktop-width) {
+    }
+  }
+
+  &__container-inner--bordered &__field {
+    margin-bottom: 13px;
+
+    @media (min-width: $desktop-width) {
       margin-bottom: 0;
-      width: 45%;
     }
   }
 
   &__legend {
-    width: 100%;
-    display: block;
     position: relative;
-    margin-bottom: 20px;
+
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 76px;
+    }
 
     &::after {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 100%;
-      background-color: $accent-color;
       position: absolute;
-      top: 13px;
+      top: 14px;
       z-index: -1;
+
+      display: block;
+      width: 100%;
+      height: 3px;
+
+      background-color: $accent-color;
+
+      content: "";
+
+      @media (min-width: $tablet-width) {
+        top: 28px;
+      }
     }
   }
 
   &__legend-container {
     display: flex;
     padding-left: 0;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
   }
 
   &__legend-text {
     margin: 0;
+    padding-right: 15px;
     padding-left: 20px;
-    padding-right: 30px;
-    font-family: $title-fontstack;
+
     font-size: 24px;
+    font-family: $title-fontstack;
     line-height: 24px;
+
     background-color: #ffffff;
 
     @media (min-width: $tablet-width) {
+      padding-right: 40px;
+      padding-left: 40px;
+
       font-size: 36px;
       line-height: 46px;
-      padding-left: 70px;
     }
   }
 
@@ -162,36 +259,48 @@
     }
   }
 
+  &__fieldset--additions &__legend {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 54px;
+    }
+  }
+
   &__input-radio,
   &__input-checkbox {
     display: none;
   }
 
   &__label {
-    font-family: $title-fontstack;
-    text-transform: uppercase;
+    margin-right: 15px;
+
     font-size: 16px;
-    margin-right: 16px;
+    font-family: $title-fontstack;
     white-space: nowrap;
+    text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
+      margin-right: 20px;
+
       font-size: 20px;
       line-height: 20px;
     }
 
     &--radio,
     &--checkbox {
-      display: flex;
       position: relative;
+
+      display: flex;
       align-items: center;
 
       &::before {
-        content: "";
         display: block;
         width: 30px;
         height: 30px;
-        border: 1px solid #ebebeb;
         margin-right: 16px;
+
+        border: 1px solid #ebebeb;
+
+        content: "";
 
         @media (min-width: $tablet-width) {
           width: 40px;
@@ -210,61 +319,169 @@
 
   &__input-radio:checked + &__label--radio::after,
   &__input-checkbox:checked + &__label--checkbox::after {
-    content: "";
-    display: block;
     position: absolute;
     left: 9px;
+
+    display: block;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
+
     background-color: $accent-color;
+    border-radius: 50%;
+
+    content: "";
 
     @media (min-width: $tablet-width) {
+      left: 11px;
+
       width: 18px;
       height: 18px;
-      left: 11px;
     }
   }
 
   &__input-checkbox:checked + &__label--checkbox::after {
-    border-radius: 0;
     left: 5px;
+
     width: 21px;
     height: 16px;
+
+    background: url("../../img/icon-tick.svg");
+
+    border-radius: 0;
   }
 
   &__input {
     &::placeholder {
-      font-family: $title-fontstack;
       font-size: 16px;
+      font-family: $title-fontstack;
       text-transform: uppercase;
 
       @media (min-width: $tablet-width) {
         font-size: 20px;
       }
     }
-    border: 1px solid #ebebeb;
-    padding: 16px;
     width: 100%;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+
+    border: 1px solid #ebebeb;
 
     @media (min-width: $tablet-width) {
       padding: 16px;
-      padding-top: 22px;
+      padding-top: 18px;
       padding-bottom: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 5px;
+      padding-top: 16px;
+      padding-bottom: 14px;
+    }
+  }
+
+  &__field--email,
+  &__field--phone {
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+      margin: 0;
+    }
+
+    &::after {
+      position: absolute;
+
+      display: block;
+
+      background-repeat: no-repeat;
+
+      background-position: center center;
+
+      content: "";
+    }
+
+    & .form__label {
+      margin-right: 10px;
+
+      @media (min-width: $tablet-width) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__field--email {
+    margin-top: 19px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+
+    &::after {
+      top: 16px;
+      right: 16px;
+
+      width: 17px;
+      height: 13px;
+
+      background-image: url("../../img/icon-mail.svg");
+
+      @media (min-width: $tablet-width) {
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  &__field--phone {
+    &::after {
+      top: 13px;
+      right: 14px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../../img/icon-phone.svg");
+
+      @media (min-width: $tablet-width) {
+        top: 18px;
+        right: 17px;
+      }
     }
   }
 
   &__textarea {
     &::placeholder {
-      font-family: $title-fontstack;
       font-size: 16px;
+      font-family: $title-fontstack;
       text-transform: uppercase;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+      }
     }
-    border: 1px solid $gray-color;
-    padding: 12px;
     width: 100%;
-    min-height: 150px;
+    min-height: 148px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+
+    border: 1px solid $gray-color;
+
     resize: none;
+
+    @media (min-width: $tablet-width) {
+      min-height: 166px;
+      margin-top: 21px;
+      padding-top: 12px;
+      padding-left: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 172px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
   }
 
   &__additions {
@@ -272,11 +489,26 @@
       display: flex;
       flex-wrap: wrap;
     }
+
+    @media (min-width: $tablet-width) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 5px;
+    }
   }
 
   &__additions &__field {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+
     @media (min-width: $tablet-width) {
-      width: 50%;
+      width: 286px;
+      margin-bottom: 32px;
     }
 
     @media (min-width: $desktop-width) {

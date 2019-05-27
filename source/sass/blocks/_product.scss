@@ -5,26 +5,31 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
+
     flex-direction: column;
     align-items: center;
-    padding: 40px;
-    padding-top: 165px;
-    background-color: $gray-color;
-    margin: 0;
     width: 100%;
+    margin: 0;
+    padding: 40px 38px;
+    padding-top: 142px;
+
+    background-color: $gray-color;
   }
 
   &__image {
     @media (min-width: $tablet-width) {
       position: absolute;
       bottom: 100%;
-      transform: translateY(90px);
-      height: 200px;
+
+      outline: 1px solid lime;
+
+      transform: translateY(124px);
     }
   }
 
   &__info {
     width: 50%;
+    padding-top: 22px;
 
     @media (min-width: $tablet-width) {
       width: 100%;
@@ -32,38 +37,44 @@
   }
 
   &__title {
-    font-family: $title-fontstack;
-    color: $title-color;
-    line-height: 18px;
     margin: 0;
-    padding-top: 28px;
+
     padding-right: 60px;
     padding-bottom: 10px;
-    text-transform: uppercase;
+
+    color: $title-color;
     font-weight: normal;
+    font-family: $title-fontstack;
+    line-height: 20px;
+    text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
-      margin: 0 auto;
       width: 130px;
-      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 18px;
       padding: 0;
+
       font-size: 20px;
       line-height: 20px;
-      margin-bottom: 15px;
+      text-align: center;
     }
   }
 
   &__table {
-    border-collapse: collapse;
     display: block;
+    padding-top: 1px;
+
     font-size: 12px;
-    line-height: 16px;
+    line-height: 15px;
+
+    border-collapse: collapse;
 
     @media (min-width: $tablet-width) {
       width: 100%;
+      margin-bottom: 33px;
+
       font-size: 16px;
       line-height: 16px;
-      margin-bottom: 33px;
     }
   }
 
@@ -76,12 +87,29 @@
     justify-content: space-between;
 
     @media (min-width: $tablet-width) {
-      padding: 10px 0;
+      padding: 8px 0;
+      padding-bottom: 7px;
+
       border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  &__key {
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+  }
+
+  &__value {
+    padding-right: 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
     }
   }
 
   &__button {
     width: 100%;
+    min-height: 39px;
   }
 }

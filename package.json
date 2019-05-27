@@ -14,7 +14,9 @@
     "gulp-sourcemaps": "2.6.x",
     "prettier": "1.17.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-order": "3.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

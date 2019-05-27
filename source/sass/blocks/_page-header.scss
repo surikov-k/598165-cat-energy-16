@@ -1,47 +1,57 @@
 .page-header {
   @media (min-width: $tablet-width) {
+    display: flex;
     width: $tablet-width;
     margin: 0 auto;
-    display: flex;
-    margin-bottom: 70px;
+    margin-bottom: 29px;
+    padding: 0 30px;
+    padding-top: 18px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
+    padding-top: 50px;
+    padding-right: 40px;
   }
 
   &__top {
-    min-height: 66px;
     border-bottom: 1px solid $gray-color;
-    display: flex;
-    margin-right: auto;
 
     @media (min-width: $tablet-width) {
+      margin-right: auto;
+
       border: none;
     }
   }
 
-  &__logo {
+  &__container {
     display: flex;
-    width: 280px;
-    margin: 0 auto;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    min-height: 66px;
 
     @media (min-width: $tablet-width) {
       width: auto;
-      justify-content: flex-start;
     }
   }
 
   &__menu-toggle {
     width: 18px;
     height: 18px;
-    background-color: $gray-color;
+
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../../img/icon-close.svg");
+    background-repeat: no-repeat;
     border: none;
 
     @media (min-width: $tablet-width) {
       display: none;
+    }
+  }
+
+  &__nav {
+    @media (min-width: $tablet-width) {
+      margin-top: 23px;
     }
   }
 }

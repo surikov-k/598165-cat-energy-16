@@ -11,28 +11,21 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <div class="container page-header__logo">
+        <div class="container page-header__container">
           <img
-            src="http://placehold.it/33x38"
+            src="img/logo-mobile.svg"
             alt="Лого Кэт энерджи"
-            class="page-header__logo-image"
-            width="33"
+            class="page-header__logo"
+            width="191"
             height="38"
-          />
-          <img
-            src="http://placehold.it/101x18"
-            alt="Логотип Кэт энерджи"
-            class="page-header__logo-type"
-            width="101"
-            height="18"
           />
           <button class="page-header__menu-toggle">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list site-list">
+      <nav class="page-header__nav">
+        <ul class="page-header__nav-list site-list site-list--on-background">
           <li class="site-list__item">
             <a href="index.html" class="site-list__link">
               Главная
@@ -71,7 +64,7 @@
             <div class="form__fieldset--inner">
               <div class="container form__container-inner">
                 <div class="form__field">
-                  <label for="name" class="form__label">Имя:<sup>*</sup></label>
+                  <label for="name" class="form__label">Имя:*</label>
                   <input
                     class="form__input"
                     type="text"
@@ -82,7 +75,7 @@
                 </div>
                 <div class="form__field">
                   <label for="weight" class="form__label"
-                    >Вес&nbsp;(кг):<sup>*</sup></label
+                    >Вес&nbsp;(кг):*</label
                   >
                   <input
                     class="form__input"
@@ -162,9 +155,9 @@
               </div>
             </legend>
             <div class="container form__container">
-              <div class="form__field">
+              <div class="form__field form__field--email">
                 <label for="email" class="form__label">
-                  E-mail:<sup>*</sup>
+                  E-mail:*
                 </label>
                 <input
                   type="text"
@@ -174,10 +167,8 @@
                   placeholder="kuklachev@gmail.com"
                 />
               </div>
-              <div class="form__field">
-                <label for="phone" class="form__label"
-                  >Телефон:<sup>*</sup></label
-                >
+              <div class="form__field form__field--phone">
+                <label for="phone" class="form__label">Телефон:*</label>
                 <input
                   type="tel"
                   class="form__input form__input--phone"
@@ -205,7 +196,7 @@
               ></textarea>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--additions">
             <legend class="form__legend">
               <div class="container form__legend-container">
                 <p class="form__legend-text">
@@ -275,7 +266,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__address address">
-        <div class="container">
+        <div class="container address__container">
           <p class="address__invitation">
             Приглашаем к&nbsp;сотрудничеству дилеров!
           </p>
@@ -286,19 +277,21 @@
         </div>
       </div>
       <div class="page-footer__map">
-        <img
-          class="page-footer__map-image"
-          src="http://placehold.it/320x362"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-          width="320"
-          height="362"
-        />
+        <div class="container page-footer__container">
+          <img
+            class="page-footer__map-pin"
+            src="img/map-pin.png"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+            width="62"
+            height="53"
+          />
+        </div>
       </div>
       <div class="container">
         <a href="#" class="page-footer__logo">
           <img
             class="page-footer__logo-image"
-            src="http://placehold.it/128x24"
+            src="img/logo-footer.svg"
             alt="Лого Cat Energy"
             width="128"
             height="24"
@@ -306,17 +299,17 @@
         </a>
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a href="#" class="social__link social__link--vk">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a href="#" class="social__link social__link--instagram">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link">
+            <a href="#" class="social__link social__link--facebook">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
@@ -327,7 +320,7 @@
           </a>
           <a href="https://htmlacademy.ru" class="page-footer__developers-logo">
             <img
-              src="http://placehold.it/27x34"
+              src="img/htmlacademy.svg"
               alt="HTML Academy"
               class="page-footer__developers-logo-image"
               width="27"

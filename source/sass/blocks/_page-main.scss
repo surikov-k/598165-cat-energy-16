@@ -1,13 +1,17 @@
 .page-main {
   &__section {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 
-    &--gray {
-      background-color: $gray-color;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 80px;
     }
+  }
+
+  &__section:last-child {
+    margin-bottom: 0;
   }
 }
