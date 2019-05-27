@@ -1,10 +1,27 @@
 .catalog {
+  margin-bottom: 26px;
+  padding-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
+
   &__title {
     @include title-style;
-    text-align: center;
-    margin-bottom: 33px;
+    margin-bottom: 28px;
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 86px;
+
       font-size: 60px;
       text-align: left;
     }
@@ -22,97 +39,127 @@
   }
 
   &__item {
-    border-bottom: 1px solid $gray-color;
-    padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 25px;
+    padding-left: 20px;
+
+    border-bottom: 1px solid $gray-color;
 
     @media (min-width: $tablet-width) {
-      width: 50%;
       display: flex;
-      border: none;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin: 0;
-      margin-top: 145px;
+      width: 50%;
       min-height: 430px;
+      margin: 0;
+      margin-top: 78px;
+      margin-bottom: 37px;
+      padding-right: 30px;
+      padding-left: 30px;
+
+      border: none;
     }
 
     @media (min-width: $desktop-width) {
       width: 25%;
-      padding-left: 40px;
+      margin-bottom: 40px;
       padding-right: 40px;
+      padding-left: 40px;
     }
   }
 
   &__load {
     margin: 0 auto;
-    padding-top: 85px;
-    padding-bottom: 25px;
+    padding-top: 79px;
+
     text-align: center;
 
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 38px;
+      padding-top: 164px;
+      padding-bottom: 40px;
+
       border: 1px solid #e6e6e6;
-      padding: 40px;
-      padding-top: 165px;
     }
   }
 
   &__load-more-link {
     position: relative;
+
     display: block;
-    font-family: $title-fontstack;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 20px;
+
     color: $title-color;
+    font-size: 16px;
+    font-family: $title-fontstack;
+    line-height: 20px;
+    text-transform: uppercase;
     text-decoration: none;
 
     @media (min-width: $tablet-width) {
-      // width: 150px;
-      margin-bottom: 30px;
+      margin-bottom: 18px;
+      padding: 0 35px;
+
       font-size: 20px;
       line-height: 20px;
     }
 
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
+
     &::before {
-      content: "";
-      display: block;
       position: absolute;
-      bottom: 40px;
+      bottom: 43px;
       left: 50%;
-      transform: translateX(-15px);
+
+      display: block;
       width: 30px;
       height: 30px;
-      background-color: $gray-color;
+
+      background: url("../../img/icon-plus-mobile.svg") no-repeat center center;
+      transform: translateX(-15px);
+      opacity: 0.2;
+
+      content: "";
 
       @media (min-width: $tablet-width) {
-        bottom: 100px;
+        bottom: 89px;
+
         width: 60px;
         height: 60px;
+
+        background-image: url("../../img/icon-plus.svg");
+
         transform: translateX(-30px);
       }
     }
   }
 
   &__load-text {
+    margin-top: 8px;
+    margin-bottom: 21px;
+
     font-size: 12px;
     line-height: 16px;
 
     @media (min-width: $tablet-width) {
-      // width: 200px;
-      font-size: 16px;
-      line-height: 20px;
       margin-bottom: auto;
+      padding: 0 35px;
+
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
     }
   }
 
   &__load-all {
-    background-color: $gray-color;
     color: $body-text-color;
+
+    background-color: $gray-color;
 
     @media (min-width: $tablet-width) {
       width: 100%;

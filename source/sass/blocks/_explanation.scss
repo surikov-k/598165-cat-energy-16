@@ -1,11 +1,27 @@
 .explanation {
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    border-bottom: 1px solid $gray-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+
+    border-bottom: none;
+  }
+
   &__title {
     @include title-style;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
+
+    line-height: 50px;
 
     @media (min-width: $tablet-width) {
       font-size: 60px;
-      margin-bottom: 75px;
     }
   }
 
@@ -17,50 +33,73 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
     }
   }
 
   &__item {
     position: relative;
+
     display: block;
     min-height: 60px;
-    padding-left: 80px;
     margin-bottom: 20px;
+    padding-top: 2px;
+    padding-left: 80px;
 
     @media (min-width: $tablet-width) {
-      width: 50%;
-      padding-top: 120px;
+      width: 324px;
+      margin-top: 43px;
+      margin-bottom: 0;
+      padding-top: 112px;
+      padding-right: 77px;
+      padding-bottom: 90px;
       padding-left: 0;
-      padding-bottom: 95px;
-      padding-right: 100px;
+    }
 
-      &::after {
-        counter-increment: number;
-        content: counter(number);
+    &::after {
+      @media (min-width: $tablet-width) {
         position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: -1;
+
         display: block;
         width: 100%;
-        min-height: 280px;
-        top: 0;
-        left: 0;
-        font-family: $title-fontstack;
+        padding-right: 78px;
+
         color: #f2f2f2;
         font-size: 280px;
+        font-family: $title-fontstack;
         line-height: 210px;
-        text-align: center;
-        z-index: -1;
+        text-align: right;
+
+        content: counter(number);
+        counter-increment: number;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-right: 0;
       }
     }
 
     &::before {
-      content: "";
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
+
+      display: block;
       width: 60px;
       height: 60px;
+
       background-color: $accent-color;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      content: "";
 
       @media (min-width: $tablet-width) {
         width: 80px;
@@ -70,13 +109,43 @@
 
     @media (min-width: $desktop-width) {
       width: 245px;
+      min-height: 228px;
       padding: 0;
       padding-top: 110px;
-      min-height: 228px;
 
       &::after {
         text-align: right;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 114px;
+    }
+  }
+
+  &__item--nutrients::before {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
+
+  &__item--nutrients::after {
+    @media (min-width: $tablet-width) {
+      padding-right: 14px;
+    }
+  }
+
+  &__item--powder::before {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
+
+  &__item--food::before {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
+
+  &__item--month::before {
+    background-image: url("../../img/advantage-clock@1x.png");
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
   }
 }

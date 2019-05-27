@@ -1,10 +1,12 @@
 .table {
-  border-collapse: collapse;
   display: block;
   margin-bottom: 30px;
 
+  border-collapse: collapse;
+
   @media (min-width: $tablet-width) {
     display: flex;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -14,57 +16,78 @@
   & tbody {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
 
     @media (min-width: $tablet-width) {
-      width: 368px;
+      width: 366px;
       margin-right: auto;
     }
   }
 
   &__row {
     display: flex;
-    width: 44%;
     flex-direction: column-reverse;
+    width: 44%;
 
     @media (min-width: $tablet-width) {
       width: 163px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 28px;
+    }
   }
 
   &__key {
+    z-index: 2;
+
     align-self: center;
     width: 68%;
     margin-top: -10px;
     padding: 0 14px;
+
     font-size: 12px;
     line-height: 12px;
-    text-transform: lowercase;
     text-align: center;
+    text-transform: lowercase;
+
     background-color: $gray-color;
-    z-index: 2;
 
     @media (min-width: $tablet-width) {
-      font-size: 14px;
       width: auto;
-      padding: 0 10px;
       margin-top: -7px;
+      padding: 0 10px;
+
+      font-size: 14px;
+
+      background-color: #ffffff;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $gray-color;
     }
   }
 
   &__value {
     display: block;
-    padding: 20px 0;
     width: 100%;
-    font-family: $title-fontstack;
-    font-size: 24px;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 21px;
+
     color: $title-color;
-    text-transform: uppercase;
+    font-size: 24px;
+    font-family: $title-fontstack;
     text-align: center;
+    text-transform: uppercase;
+
     border: 1px solid #cdcdcd;
     border-radius: 3px;
 
     @media (min-width: $tablet-width) {
+      padding-top: 22px;
+      padding-bottom: 23px;
+
       font-size: 30px;
     }
   }
@@ -72,6 +95,7 @@
   &__footer {
     display: flex;
     justify-content: center;
+
     font-family: $title-fontstack;
     text-transform: uppercase;
 
@@ -86,9 +110,11 @@
   }
 
   &__footer tr {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
@@ -96,6 +122,10 @@
   }
 
   &__footer td {
+    @media (min-width: $tablet-width) {
+      padding-top: 10px;
+    }
+
     @media (min-width: $desktop-width) {
       margin-right: 60px;
     }

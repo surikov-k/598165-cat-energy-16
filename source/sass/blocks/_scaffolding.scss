@@ -14,24 +14,27 @@ html {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+
+  clip-path: inset(100%);
 }
 
 body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  line-height: 18px;
-  font-family: "Arial", "Helvetica", sans-serif;
+
   color: $body-text-color;
+  font-size: 14px;
+  font-family: "Arial", "Helvetica", sans-serif;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -42,4 +45,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.hidden {
+  display: none;
 }
