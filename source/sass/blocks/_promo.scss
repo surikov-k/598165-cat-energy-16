@@ -107,8 +107,13 @@
 
     background: #63a73a url("../../img/index-background-mobile@1x.jpg")
       no-repeat center;
+    background-size: 320px 305px;
 
     content: "";
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/index-background-mobile@2x.jpg");
+    }
 
     @media (min-width: $tablet-width) {
       display: none;
