@@ -49,10 +49,30 @@
       &[href] {
         border: none;
       }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     @media (min-width: $desktop-width) {
       font-size: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .page-index .page-header &__link {
+      color: #ffffff;
+
+      border-bottom: 2px solid #ffffff;
+
+      &[href] {
+        border: none;
+      }
     }
   }
 }

@@ -161,6 +161,14 @@
 
     background-color: $gray-color;
 
+    &:hover {
+      background-color: $gray-color-dark;
+    }
+
+    &:active {
+      color: rgba(65, 55, 55, 0.3);
+    }
+
     @media (min-width: $tablet-width) {
       width: 100%;
     }

@@ -3,7 +3,7 @@
     display: flex;
     width: $tablet-width;
     margin: 0 auto;
-    margin-bottom: 29px;
+    margin-bottom: 25px;
     padding: 0 30px;
     padding-top: 18px;
   }
@@ -32,12 +32,43 @@
 
     @media (min-width: $tablet-width) {
       width: auto;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 10px;
+    }
+  }
+
+  &__link {
+    &[href]:hover {
+      opacity: 0.8;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__logo {
+    @media (min-width: $tablet-width) {
+      width: 173px;
+      height: 58px;
+      margin-top: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 202px;
+      height: 59px;
+      margin-top: 4px;
     }
   }
 
   &__menu-toggle {
     width: 18px;
     height: 18px;
+    margin-right: 3px;
+    padding: 0;
 
     background-color: rgba(255, 255, 255, 0);
     background-image: url("../../img/icon-close.svg");
