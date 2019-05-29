@@ -183,6 +183,18 @@
 
     border-top: 1px solid #d9d9d9;
 
+    &:hover::after {
+      width: 33px;
+      height: 11px;
+
+      background: url("../../img/icon-right-arrow-verylong.svg") no-repeat
+        center;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     &::after {
       display: inline-block;
       width: 24px;
