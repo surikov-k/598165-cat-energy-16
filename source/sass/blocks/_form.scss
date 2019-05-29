@@ -331,6 +331,7 @@
   &__input-radio:checked + &__label--radio::after,
   &__input-checkbox:checked + &__label--checkbox::after {
     position: absolute;
+    top: 9px;
     left: 9px;
 
     display: block;
@@ -343,6 +344,7 @@
     content: "";
 
     @media (min-width: $tablet-width) {
+      top: 11px;
       left: 11px;
 
       width: 18px;
@@ -351,7 +353,7 @@
   }
 
   &__input-checkbox:checked + &__label--checkbox::after {
-    left: 10px;
+    left: 5px;
 
     width: 21px;
     height: 16px;
@@ -359,6 +361,10 @@
     background: url("../../img/icon-tick.svg");
 
     border-radius: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 10px;
+    }
   }
 
   &__input {
