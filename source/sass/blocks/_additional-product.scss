@@ -45,8 +45,14 @@
     }
   }
 
+  &__table &__title,
+  &__table tbody {
+    display: block;
+  }
+
   &__table-key,
   &__table-value {
+    display: block;
     padding: 0;
   }
 

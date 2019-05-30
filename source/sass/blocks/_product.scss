@@ -94,12 +94,15 @@
   }
 
   &__key {
+    display: block;
+
     @media (min-width: $tablet-width) {
       padding: 0;
     }
   }
 
   &__value {
+    display: block;
     padding-right: 0;
 
     @media (min-width: $tablet-width) {

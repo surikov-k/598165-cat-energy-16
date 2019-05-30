@@ -41,6 +41,8 @@
   &__key {
     z-index: 2;
 
+    display: block;
+
     align-self: center;
     width: 68%;
     margin-top: -10px;
@@ -122,6 +124,8 @@
   }
 
   &__footer td {
+    display: block;
+
     @media (min-width: $tablet-width) {
       padding-top: 10px;
     }
