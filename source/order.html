@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/picturefill.min.js"></script>
     <script src="js/svg4everybody.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWFNF2OjCSsMbpeRKdBXvpbz7Fn4J4UKc&callback=initMap"
+      defer
+    ></script>
   </head>
 
   <body page-order>
@@ -85,6 +89,7 @@
         <form
           action=" https://echo.htmlacademy.ru"
           class="selection__form form"
+          method="POST"
         >
           <fieldset class="form__fieldset">
             <div class="form__fieldset--inner">
@@ -320,17 +325,7 @@
           </p>
         </div>
       </div>
-      <div class="page-footer__map">
-        <div class="container page-footer__container">
-          <img
-            class="page-footer__map-pin"
-            src="img/map-pin.png"
-            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-            width="62"
-            height="53"
-          />
-        </div>
-      </div>
+      <div id="map" class="page-footer__map"></div>
       <div class="container">
         <a href="index.html" class="page-footer__logo">
           <svg class="page-footer__logo-image" width="128" height="24">
@@ -372,7 +367,7 @@
           </li>
         </ul>
         <a
-          href="https://htmlacademy.ru"
+          href="https://htmlacademy.ru/intensive/adaptive"
           class="page-footer__developers-credits"
         >
           <div class="page-footer__developers-link">
@@ -390,6 +385,35 @@
     </footer>
     <script>
       svg4everybody();
+    </script>
+    <script>
+      var initMap = function() {
+        var map;
+
+        var mq = window.matchMedia("(min-width: 1300px)");
+
+        var myFunction = function(x) {
+          var place = {lat: 59.938668, lng: 30.32308};
+          var center = place;
+          if (x.matches) {
+            center = {lat: 59.938775, lng: 30.319395};
+          }
+          map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 17.2,
+            center: center,
+            disableDefaultUI: true
+          });
+          var image = "img/map-pin.png";
+          var marker = new google.maps.Marker({
+            position: place,
+            map: map,
+            icon: image
+          });
+        };
+
+        myFunction(mq);
+        mq.addListener(myFunction);
+      };
     </script>
     <script src="js/script.js"></script>
   </body>

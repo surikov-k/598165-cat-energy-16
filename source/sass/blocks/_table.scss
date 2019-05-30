@@ -112,6 +112,8 @@
   }
 
   &__footer tr {
+    display: flex;
+
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: column;

@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/svg4everybody.js"></script>
     <script src="js/picturefill.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWFNF2OjCSsMbpeRKdBXvpbz7Fn4J4UKc&callback=initMap"
+      defer
+    ></script>
   </head>
 
   <body class="page-catalog">
@@ -147,7 +151,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -218,7 +222,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -289,7 +293,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -360,7 +364,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -431,7 +435,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -502,7 +506,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -573,7 +577,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="product__button button">Заказать</a>
+              <a href="buy.html" class="product__button button">Заказать</a>
             </article>
           </li>
           <li class="catalog__item">
@@ -584,7 +588,7 @@
               <p class="catalog__load-text">
                 На самом деле вкусов гораздо больше!
               </p>
-              <a href="#" class="catalog__load-all button">
+              <a href="new.html" class="catalog__load-all button">
                 Показать все
               </a>
             </div>
@@ -617,7 +621,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <a href="#" class="additional-product__button button">
+                <a href="buy.html" class="additional-product__button button">
                   Заказать
                 </a>
               </article>
@@ -635,7 +639,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <a href="#" class="additional-product__button button">
+                <a href="buy.html" class="additional-product__button button">
                   Заказать
                 </a>
               </article>
@@ -653,7 +657,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <a href="#" class="additional-product__button button">
+                <a href="buy.html" class="additional-product__button button">
                   Заказать
                 </a>
               </article>
@@ -673,7 +677,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <a href="#" class="additional-product__button button">
+                <a href="buy.html" class="additional-product__button button">
                   Заказать
                 </a>
               </article>
@@ -699,17 +703,7 @@
           </p>
         </div>
       </div>
-      <div class="page-footer__map">
-        <div class="container page-footer__container">
-          <img
-            class="page-footer__map-pin"
-            src="img/map-pin.png"
-            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-            width="62"
-            height="53"
-          />
-        </div>
-      </div>
+      <div id="map" class="page-footer__map"></div>
       <div class="container">
         <a href="index.html" class="page-footer__logo">
           <svg class="page-footer__logo-image" width="128" height="24">
@@ -751,7 +745,7 @@
           </li>
         </ul>
         <a
-          href="https://htmlacademy.ru"
+          href="https://htmlacademy.ru/intensive/adaptive"
           class="page-footer__developers-credits"
         >
           <div class="page-footer__developers-link">
@@ -769,6 +763,35 @@
     </footer>
     <script>
       svg4everybody();
+    </script>
+    <script>
+      var initMap = function() {
+        var map;
+
+        var mq = window.matchMedia("(min-width: 1300px)");
+
+        var myFunction = function(x) {
+          var place = {lat: 59.938668, lng: 30.32308};
+          var center = place;
+          if (x.matches) {
+            center = {lat: 59.938775, lng: 30.319395};
+          }
+          map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 17.2,
+            center: center,
+            disableDefaultUI: true
+          });
+          var image = "img/map-pin.png";
+          var marker = new google.maps.Marker({
+            position: place,
+            map: map,
+            icon: image
+          });
+        };
+
+        myFunction(mq);
+        mq.addListener(myFunction);
+      };
     </script>
     <script src="js/script.js"></script>
   </body>

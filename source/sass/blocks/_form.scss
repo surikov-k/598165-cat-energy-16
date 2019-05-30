@@ -388,7 +388,7 @@
       outline: none;
     }
 
-    &:invalid {
+    &--invalid {
       border: 1px solid $error-color;
     }
 
@@ -444,7 +444,7 @@
     color: $accent-color;
   }
 
-  &__input:invalid + &__input-icon {
+  &__input--invalid + &__input-icon {
     color: $error-color;
   }
 

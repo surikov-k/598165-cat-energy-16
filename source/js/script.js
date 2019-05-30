@@ -5,6 +5,7 @@
   var menuToggle = document.querySelector('.page-header__menu-toggle');
   headerMain.classList.remove('page-header__nav--nojs');
 
+
   menuToggle.addEventListener('click', function () {
     if (headerMain.classList.contains('page-header__nav--closed')) {
       headerMain.classList.remove('page-header__nav--closed');

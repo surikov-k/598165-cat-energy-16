@@ -19,6 +19,10 @@
       width: 690px;
       margin-bottom: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: -60px;
+    }
   }
 
   &__item {
